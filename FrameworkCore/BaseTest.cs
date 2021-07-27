@@ -9,13 +9,14 @@ namespace FrameworkCore
         public static void SetUp()
         {
             DriverFactory.InitDriver("Chrome");
+            DriverFactory.Driver.Navigate().GoToUrl("https://executeautomation.com/");
         }
 
         [TearDown]
         public static void TestTearDown()
         {
-            DriverFactory.CloseApp();
-            DriverFactory.CleanUpDriver();
+            //DriverFactory.CloseApp();
+            //DriverFactory.CleanUpDriver();
         }
     }
 }

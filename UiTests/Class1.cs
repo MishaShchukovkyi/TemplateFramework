@@ -1,4 +1,5 @@
-﻿using FrameworkCore;
+﻿using BusinessLayer;
+using FrameworkCore;
 using NUnit.Framework;
 using System;
 
@@ -10,8 +11,10 @@ namespace UiTests
         [Test]
         public static void test1()
         {
-            DriverFactory.Driver.Navigate().GoToUrl("https://executeautomation.com/");
+            ExecuteAutomationPage.ClickButton();
+            ExecuteAutomationPage.ClickButton2();
             Console.WriteLine("1");
+            
         }
     }
 }
