@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Concurrent;
 
@@ -48,6 +49,17 @@ namespace FrameworkCore
         public static void InitDriver(string browser)
         {
             DriverDictionary.TryAdd(DriverKey, new ChromeDriver());//add logic for creating instances of different browsers FF,Chrome,SauceLab
+
+            if(browser == "sauceLabs")
+            {
+
+                //var caps = new ChromeOptions();
+                //caps.PlatformName = 
+                //caps.AddAdditionalCapability("","");
+                //IWebDriver remote = new RemoteWebDriver(new Uri(""), caps);
+                //DriverDictionary.TryAdd(DriverKey, remote);
+            }
+
         }
 
         public static void CleanUpDriver()

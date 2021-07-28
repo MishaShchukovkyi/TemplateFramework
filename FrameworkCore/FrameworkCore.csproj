@@ -56,12 +56,16 @@
   <ItemGroup>
     <Compile Include="BaseTest.cs" />
     <Compile Include="Browser.cs" />
+    <Compile Include="Configuration\ActiveConfiguration.cs" />
     <Compile Include="DriverFactory.cs" />
     <Compile Include="Element.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reporter\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

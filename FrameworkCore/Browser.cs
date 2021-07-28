@@ -18,6 +18,8 @@ namespace FrameworkCore
             return ExecuteJavaScript<IReadOnlyCollection<Object>>("var performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {}; var network = performance.getEntries() || {}; return network;");
         }
 
+
+        //to use method pass logs and filenames FilterNetwork(Browser.GetNetworkLogs, "smetric")
         public static List<string> FilterNetwork(IReadOnlyCollection<Object> networkLogs, string param)
         {
             return networkLogs

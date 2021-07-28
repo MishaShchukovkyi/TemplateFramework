@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using FrameworkCore.Configuration;
+using NUnit.Framework;
 
 namespace FrameworkCore
 {
@@ -9,7 +10,7 @@ namespace FrameworkCore
         public static void SetUp()
         {
             DriverFactory.InitDriver("Chrome");
-            DriverFactory.Driver.Navigate().GoToUrl("https://executeautomation.com/");
+            DriverFactory.Driver.Navigate().GoToUrl(ActiveConfiguration.AppUrl);
         }
 
         [TearDown]
