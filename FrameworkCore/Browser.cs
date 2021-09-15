@@ -19,7 +19,7 @@ namespace FrameworkCore
         }
 
 
-        //to use method pass logs and filenames FilterNetwork(Browser.GetNetworkLogs, "smetric")
+        //to use method pass logs and filenames FilterNetwork(Browser.GetNetworkLogs, "smetric")d
         public static List<string> FilterNetwork(IReadOnlyCollection<Object> networkLogs, string param)
         {
             return networkLogs
