@@ -16,8 +16,8 @@ namespace FrameworkCore
         [TearDown]
         public static void TestTearDown()
         {
-            //DriverFactory.CloseApp();
-            //DriverFactory.CleanUpDriver();
+            DriverFactory.CloseApp();
+            DriverFactory.CleanUpDriver();
         }
     }
 }
