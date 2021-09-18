@@ -8,6 +8,7 @@ using System.Linq;
 using FrameworkCore.Configuration;
 using OpenQA.Selenium.Remote;
 //ne lox
+//LOX
 
 namespace FrameworkCore
 {
