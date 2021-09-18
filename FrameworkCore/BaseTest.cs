@@ -1,5 +1,7 @@
-﻿using FrameworkCore.Configuration;
+﻿using System.Linq;
+using FrameworkCore.Configuration;
 using NUnit.Framework;
+using NUnit.Framework.Internal;
 
 namespace FrameworkCore
 {
@@ -9,7 +11,13 @@ namespace FrameworkCore
         [SetUp]
         public static void SetUp()
         {
-            DriverFactory.InitDriver("Chrome");
+            var args = TestExecutionContext.CurrentContext.CurrentTest.Arguments;
+            var platform = (Platform)args.SingleOrDefault(a => a is Platform);
+            platform = platform ?? Platforms.Default;
+            
+
+
+            DriverFactory.InitDriver(platform);
             DriverFactory.Driver.Navigate().GoToUrl(ActiveConfiguration.AppUrl);
         }
 

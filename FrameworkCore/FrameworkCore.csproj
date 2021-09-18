@@ -38,6 +38,10 @@
       <HintPath>..\packages\NUnit.3.13.2\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Abstractions, Version=2.0.2.26, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.Abstractions.2.0.2.26\lib\net45\System.Configuration.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
@@ -55,9 +59,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseTest.cs" />
-    <Compile Include="Browser.cs" />
+    <Compile Include="CustomBrowser.cs" />
     <Compile Include="Configuration\ActiveConfiguration.cs" />
-    <Compile Include="DriverFactory.cs" />
+    <Compile Include="DriverFactory\DriverFactory.cs" />
+    <Compile Include="DriverFactory\GlobalExtensions.cs" />
+    <Compile Include="DriverFactory\Platform.cs" />
+    <Compile Include="DriverFactory\PlatformOptions\Browser.cs" />
+    <Compile Include="DriverFactory\PlatformOptions\DeviceName.cs" />
+    <Compile Include="DriverFactory\PlatformOptions\DeviceOrientation.cs" />
+    <Compile Include="DriverFactory\PlatformOptions\LaunchTarget.cs" />
+    <Compile Include="DriverFactory\PlatformOptions\MobilePlatform.cs" />
+    <Compile Include="DriverFactory\PlatformOptions\OS.cs" />
+    <Compile Include="DriverFactory\PlatformOptions\ScreenResolution.cs" />
+    <Compile Include="DriverFactory\Platforms.cs" />
     <Compile Include="Element.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

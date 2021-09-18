@@ -2,11 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FrameworkCore.Configuration;
 
 namespace FrameworkCore
 {
-    public static class Browser
+    public static class CustomBrowsesr
     {
+
         public static T ExecuteJavaScript<T>(string script)
         {
             var ex = (IJavaScriptExecutor)DriverFactory.Driver;
@@ -19,7 +21,7 @@ namespace FrameworkCore
         }
 
 
-        //to use method pass logs and filenames FilterNetwork(Browser.GetNetworkLogs, "smetric")d
+        //to use method pass logs and filenames FilterNetwork(CustomBrowser.GetNetworkLogs, "smetric")d
         public static List<string> FilterNetwork(IReadOnlyCollection<Object> networkLogs, string param)
         {
             return networkLogs
