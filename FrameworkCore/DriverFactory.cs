@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Remote; 
 using System;
 using System.Collections.Concurrent;
 
@@ -48,6 +48,10 @@ namespace FrameworkCore
         //Method for init driver, can contain additional logic, parse incoming 'string' tp browser
         public static void InitDriver(string browser)
         {
+#if DEBUG
+
+#else
+#endif
             DriverDictionary.TryAdd(DriverKey, new ChromeDriver());//add logic for creating instances of different browsers FF,Chrome,SauceLab
 
             if(browser == "sauceLabs")
