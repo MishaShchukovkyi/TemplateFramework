@@ -52,7 +52,6 @@ namespace UiTests
             ExecuteAutomationPage.ClickButton2();
             Console.WriteLine("1");
         }
+        //main_ 1 commit
     }
-    //commit1
-    //commit2
 }
