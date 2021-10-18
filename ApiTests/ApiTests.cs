@@ -34,5 +34,8 @@ namespace ApiTests
             var a = response.Data[0].fiats[1].name;
         }
 //Main 1
+
+
+    //Main2
     }
 }
