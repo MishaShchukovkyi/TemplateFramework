@@ -33,12 +33,7 @@ namespace ApiTests
 
             var a = response.Data[0].fiats[1].name;
         }
-//Main 1
-//Main after merge
 
-
-    //Main2
-    //Branch_2
 
     //B3_1
     //B3_2
