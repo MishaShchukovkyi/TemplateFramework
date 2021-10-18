@@ -33,5 +33,6 @@ namespace ApiTests
 
             var a = response.Data[0].fiats[1].name;
         }
+        //Branch_Main commit number 1
     }
 }
