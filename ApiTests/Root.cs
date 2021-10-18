@@ -15,4 +15,6 @@ namespace ApiTests
         public double adjusted_volume_24h_share { get; set; }
         public List<Fiat> fiats { get; set; }
     }
+
+    //Branch_A commit 3
 }
